@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Test Suite" parallel="false">
+    <test name="Test API Task ">
+        <classes>
+            <class name="Tests.com.vodadfone.Api.LoginTest"/>
+            <class name="Tests.com.vodadfone.Api.BookingTest"/>
+            <class name="Tests.com.vodadfone.Api.VaildationTest"/>
+        </classes>
+    </test>
+</suite>
