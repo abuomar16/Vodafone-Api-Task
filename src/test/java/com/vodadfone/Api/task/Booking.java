@@ -19,7 +19,7 @@ public class Booking {
 
     public static Response  CreatBook(String token) throws IOException {
 
-        // post book and get it again after login
+        
         int id = Booking.postBook(token) ;
         Response res =  Booking.GetBook(id ,token) ;
         return res ;
@@ -40,8 +40,8 @@ public class Booking {
                 .when()
                 .post("/booking")
                 .then()
-                .log().all() // Log the request and response details
-                .statusCode(200) // Validate successful creation (HTTP status code 200)
+                .log().all() 
+                .statusCode(200) 
                 .extract()
                 .response();
         //  Extract the booking ID from the response
@@ -59,8 +59,8 @@ public class Booking {
                 .when()
                 .get("/booking/" + id)
                 .then()
-                .log().all() // Log the request and response details
-                .statusCode(200) // Validate the successful retrieval
+                .log().all() 
+                .statusCode(200) 
                 .extract()
                 .response();
 
