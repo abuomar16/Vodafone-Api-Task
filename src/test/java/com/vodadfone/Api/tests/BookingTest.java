@@ -17,7 +17,6 @@ public class BookingTest {
         Response res = Booking.CreatBook(LoginTest.token);
         JSONObject Expected = Booking.getExpectadAsJson() ;
         JSONObject Actual = Booking.getActualdAsJson(res) ;
-        // Compare the two JSON objects
         JSONAssert.assertEquals(Expected, Actual, true);
     }
 
