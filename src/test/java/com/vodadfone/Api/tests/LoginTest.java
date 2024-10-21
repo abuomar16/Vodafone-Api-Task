@@ -16,12 +16,10 @@ public class LoginTest {
 
         Response res  = Login.testLoginWithAuth() ;
 
-        // Verifying that if Body exists and Not equel Null
+        
         res.then().assertThat().body(not(isEmptyOrNullString())) ;
-        // Verifying that if Token is Exist in Body and Not equel Null
         res.then().assertThat().body("token" ,not(isEmptyOrNullString())) ;
 
-        //get Token and save it to use later
         token = res.jsonPath().getString("token");
         System.out.println(token);
     }
